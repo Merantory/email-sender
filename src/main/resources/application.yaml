@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USER}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+  kafka:
+    consumer:
+      group-id: ${KAFKA_CONSUMER_GROUP_ID}
+    bootstrap-servers: ${$KAFKA_SERVER}
+
+kafka:
+  group-id: ${KAFKA_CONSUMER_GROUP_ID}
+  server: ${$KAFKA_SERVER}
+
+
